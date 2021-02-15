@@ -79,6 +79,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/retangulo_branco_background"
                 android:elevation="20dp"
+                android:onClick="nav"
                 android:text="@string/navegao" />
 
             <Button
