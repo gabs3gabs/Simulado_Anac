@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -20,12 +21,20 @@ import com.example.simuladoanac.questoes.QuestoesNavActivity;
 import com.example.simuladoanac.questoes.QuestoesRegActivity;
 import com.example.simuladoanac.questoes.QuestoesTecActivity;
 import com.example.simuladoanac.questoes.QuestoesTeoActivity;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.AdRequest;
+
 
 import java.util.List;
 
 public class MainActivity extends QuestoesActivity {
+
+    private InterstitialAd mInterstitialAd;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
@@ -48,6 +57,17 @@ public class MainActivity extends QuestoesActivity {
         btnTV = findViewById(R.id.btnTV);
         imgVoltar = findViewById(R.id.imgVoltar);
 
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.show();
+
         loadingDialog = new Dialog(this);
         loadingDialog.setContentView(R.layout.loading);
         loadingDialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.retangulo_branco_background));
@@ -64,6 +84,8 @@ public class MainActivity extends QuestoesActivity {
         btnNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mInterstitialAd.show();
+
                 loadingDialog.dismiss();
                 Intent intent = new Intent(MainActivity.this, QuestoesNavActivity.class);
                 startActivity(intent);
@@ -117,4 +139,5 @@ public class MainActivity extends QuestoesActivity {
 
 
     }
+
 }
