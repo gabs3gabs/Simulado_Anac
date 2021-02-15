@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "980046384281",
+    "project_id": "simulado-anac-91d1d",
+    "storage_bucket": "simulado-anac-91d1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980046384281:android:5d8ffabacc84b3db637c08",
+        "android_client_info": {
+          "package_name": "com.example.simuladoanac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980046384281-ep13obmctraadfdpf71brubffeh9aekc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPFy2BSjbAzEGyW9C5Ld9x830-xARsJNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980046384281-ep13obmctraadfdpf71brubffeh9aekc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

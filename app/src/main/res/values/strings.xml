@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Simulado Anac</string>
+    <string name="navegao">Navegação</string>
+    <string name="meteorologia">Meteorologia</string>
+    <string name="regulamentos">Regulamentos de Trafego Aereo</string>
+    <string name="tecnicos">Conhecimentos Tecnicos</string>
+    <string name="todos">Todos</string>
+    <string name="categoria">Categoria</string>
+    <string name="numero_questão">0/20</string>
+    <string name="proxima">proxima</string>
+    <string name="voc_acertou">Você acertou</string>
+    <string name="_0">0</string>
+    <string name="de">de</string>
+    <string name="simulados">Simulados</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="teoria_de_voo">Teoria de voo</string>
+</resources>
