@@ -41,7 +41,7 @@ import com.google.android.gms.ads.rewarded.RewardedAd;
 
 import java.util.List;
 
-public class MainActivity extends QuestoesActivity {
+public class MainActivity extends AppCompatActivity {
 
     private InterstitialAd mInterstitialAd;
     private RewardedAd rewardedAd;
