@@ -92,6 +92,13 @@ public class MainActivity extends AppCompatActivity {
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         mInterstitialAd.show();
 
+        imgVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         btnNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,51 +135,183 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        imgVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-
         btnTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, QuestoesTeoActivity.class);
-                startActivity(intent);
+                if (rewardedAd.isLoaded()) {
+                    MainActivity activityContext = MainActivity.this;
+                    RewardedAdCallback adCallback = new RewardedAdCallback() {
+                        @Override
+                        public void onRewardedAdOpened() {
+
+                        }
+
+                        @Override
+                        public void onRewardedAdClosed() {
+                            Intent intent = new Intent(MainActivity.this, QuestoesTeoActivity.class);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onUserEarnedReward(@NonNull RewardItem reward) {
+                            Intent intent = new Intent(MainActivity.this, QuestoesTeoActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(activityContext, "Boa Prova!", Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void onRewardedAdFailedToShow(AdError adError) {
+                            Toast.makeText(activityContext, "Tente Novamente!", Toast.LENGTH_LONG).show();
+                        }
+                    };
+                    rewardedAd.show(activityContext, adCallback);
+                } else {
+                    Log.d("TAG", "The rewarded ad wasn't loaded yet.");
+                }
             }
         });
 
         btnRTA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, QuestoesRegActivity.class);
-                startActivity(intent);
+                if (rewardedAd.isLoaded()) {
+                    MainActivity activityContext = MainActivity.this;
+                    RewardedAdCallback adCallback = new RewardedAdCallback() {
+                        @Override
+                        public void onRewardedAdOpened() {
+
+                        }
+
+                        @Override
+                        public void onRewardedAdClosed() {
+                            Intent intent = new Intent(MainActivity.this, QuestoesRegActivity.class);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onUserEarnedReward(@NonNull RewardItem reward) {
+                            Intent intent = new Intent(MainActivity.this, QuestoesRegActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(activityContext, "Boa Prova!", Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void onRewardedAdFailedToShow(AdError adError) {
+                            Toast.makeText(activityContext, "Tente Novamente!", Toast.LENGTH_LONG).show();
+                        }
+                    };
+                    rewardedAd.show(activityContext, adCallback);
+                } else {
+                    Log.d("TAG", "The rewarded ad wasn't loaded yet.");
+                }
             }
         });
 
         btnMet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, QuestoesMetActivity.class);
-                startActivity(intent);
+                if (rewardedAd.isLoaded()) {
+                    MainActivity activityContext = MainActivity.this;
+                    RewardedAdCallback adCallback = new RewardedAdCallback() {
+                        @Override
+                        public void onRewardedAdOpened() {
+
+                        }
+
+                        @Override
+                        public void onRewardedAdClosed() {
+                            Intent intent = new Intent(MainActivity.this, QuestoesMetActivity.class);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onUserEarnedReward(@NonNull RewardItem reward) {
+                            Intent intent = new Intent(MainActivity.this, QuestoesMetActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(activityContext, "Boa Prova!", Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void onRewardedAdFailedToShow(AdError adError) {
+                            Toast.makeText(activityContext, "Tente Novamente!", Toast.LENGTH_LONG).show();
+                        }
+                    };
+                    rewardedAd.show(activityContext, adCallback);
+                } else {
+                    Log.d("TAG", "The rewarded ad wasn't loaded yet.");
+                }
             }
         });
 
         btnCT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, QuestoesTecActivity.class);
-                startActivity(intent);
+                if (rewardedAd.isLoaded()) {
+                    MainActivity activityContext = MainActivity.this;
+                    RewardedAdCallback adCallback = new RewardedAdCallback() {
+                        @Override
+                        public void onRewardedAdOpened() {
+
+                        }
+
+                        @Override
+                        public void onRewardedAdClosed() {
+                            Intent intent = new Intent(MainActivity.this, QuestoesTecActivity.class);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onUserEarnedReward(@NonNull RewardItem reward) {
+                            Intent intent = new Intent(MainActivity.this, QuestoesTecActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(activityContext, "Boa Prova!", Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void onRewardedAdFailedToShow(AdError adError) {
+                            Toast.makeText(activityContext, "Tente Novamente!", Toast.LENGTH_LONG).show();
+                        }
+                    };
+                    rewardedAd.show(activityContext, adCallback);
+                } else {
+                    Log.d("TAG", "The rewarded ad wasn't loaded yet.");
+                }
             }
         });
 
         btnAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, QuestoesActivity.class);
-                startActivity(intent);
+                if (rewardedAd.isLoaded()) {
+                    MainActivity activityContext = MainActivity.this;
+                    RewardedAdCallback adCallback = new RewardedAdCallback() {
+                        @Override
+                        public void onRewardedAdOpened() {
+
+                        }
+
+                        @Override
+                        public void onRewardedAdClosed() {
+                            Intent intent = new Intent(MainActivity.this, QuestoesActivity.class);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onUserEarnedReward(@NonNull RewardItem reward) {
+                            Intent intent = new Intent(MainActivity.this, QuestoesActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(activityContext, "Boa Prova!", Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void onRewardedAdFailedToShow(AdError adError) {
+                            Toast.makeText(activityContext, "Tente Novamente!", Toast.LENGTH_LONG).show();
+                        }
+                    };
+                    rewardedAd.show(activityContext, adCallback);
+                } else {
+                    Log.d("TAG", "The rewarded ad wasn't loaded yet.");
+                }
             }
         });
 
