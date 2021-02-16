@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -31,7 +32,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button btnGoogleLogin, btnFacebookLogin;
+    private LinearLayout btnGoogleLogin, btnFacebookLogin;
     private FirebaseAuth mAuth;
     int RC_SIGN_IN = 264;
     GoogleSignInClient mGoogleSignInClient;
