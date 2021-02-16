@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SimuladoAnac">
-        <activity android:name=".questoes.QuestoesTecActivity"></activity>
+        <activity android:name=".questoes.QuestoesTecActivity" />
         <activity android:name=".questoes.QuestoesRegActivity" />
         <activity android:name=".questoes.QuestoesTeoActivity" />
         <activity android:name=".questoes.QuestoesMetActivity" />
@@ -21,14 +21,14 @@
         <activity android:name=".info.InfoNavActivity" />
         <activity android:name=".registro.CriarContaActivity" />
         <activity android:name=".registro.RecuperarActivity" />
-        <activity android:name=".registro.LoginActivity" />
+        <activity android:name=".MainActivity" />
 
         <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-3940256099942544~3347511713" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".registro.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

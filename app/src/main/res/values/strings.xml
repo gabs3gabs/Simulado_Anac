@@ -16,4 +16,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="teoria_de_voo">Teoria de voo</string>
     <string name="info">Para que o simulado se inicie é necessário que clique na categoria de simulado desejada até que se inicie o video!</string>
+    <string name="simuladosP">10</string>
+    <string name="sing_in">Sing in</string>
 </resources>

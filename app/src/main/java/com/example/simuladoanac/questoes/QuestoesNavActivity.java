@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -36,6 +37,7 @@ public class QuestoesNavActivity extends AppCompatActivity {
     private int pontuacao = 0;
     private String categoria;
     private int setNumero;
+    private static final String EXTRA_TEXT = "com.example.application.example.EXTRA_TEXT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
